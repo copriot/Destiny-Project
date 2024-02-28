@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap')
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: var(--gray);
+}
+
+/* değişkenler */
+:root{
+    --green: #49fd01;
+    --white:#f5f5f5;
+    --gray: #cdcccc;
+    --black:#121212;
+
+}
+h1,h2,h3,h4 {
+    font-family: "Inter";
+    color: var(--white);
+    font-weight: 900;
+}
+p{
+    font-family: "Poppins";
+    color: var(--gray);
+}
+button{
+    border: none;
+    font-family: "Poppins";
+    cursor: pointer;
+    padding: 7px 20px;
+    font-size: 16px;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+button:hover{
+    box-shadow: 2px 2px 20px var(--gray);
+    scale: 0.95;
+}
+body{
+    background-color: var(--black);
+}
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: var(--black);
+    z-index: 999;
+    border-bottom: 2px solid var(--gray);
+    
+}
+header .nav-btn{
+    display: none;
+}
+header nav .spec-link {
+    color: var(--green);
+}
+header nav {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.lnk{
+    position: relative;
+    text-decoration: none;
+    
+}
+
+.lnk::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Alt çizgi rengi */
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.lnk:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* İsteğe bağlı olarak alt çizgi animasyonu ayarları */
+.lnk::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Alt çizgi rengi */
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+
+/* footer */
+footer {
+    
+    padding: 20px;
+}
+footer .links{
+    display: grid;
+    /* gridde sütun sayısını belirler*/
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+
+} 
+footer .links .link-area{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.foot-form {
+    display: flex;
+    gap: 20px;
+}
+.foot-form input {
+    padding: 5px 10px;
+    border-radius: 10px;
+    max-height: 50px;
+}
+.foot-form button{
+    background-color: var(--green);
+    white-space: nowrap;
+
+}
+
+footer .bottom {
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid var(--gray);
+    padding: 20px;
+}
+
+/* hero */
+#hero{
+    background: url(images/back.jpg);
+    height: 50vh;
+    background-size: cover;
+    /* sayfada aşağıda olan elemanlar geliyormuş gibi efekt verir */
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+#hero-inner{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    margin-left: 20px;
+    /* cam efekti */
+    
+background: rgba(255, 255, 255, 0.08);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.1px);
+-webkit-backdrop-filter: blur(3.1px);
+border: 1px solid rgba(255, 255, 255, 0.74);
+}
+#hero-inner h1{
+    color: var(--green);
+}
+#hero-inner p{
+    text-shadow: 2px 2px 10px black;
+    color: var(--white);
+}
+#hero-inner button:nth-child(1){
+    background: var(--green);
+}
+#hero-inner button:nth-child(2){
+    background-color: rgb(234, 81, 81);
+}
