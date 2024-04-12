@@ -6,4 +6,4 @@
 
 ## GIF
 
-![](/Users/dev.zek/Desktop/my-project/destiny/destiny-gif.gif)
+![](destiny-gif.gif)#
